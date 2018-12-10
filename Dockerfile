@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 FROM scratch
 ADD ubuntu-trusty-core-cloudimg-amd64-root.tar.gz /
 
@@ -64,4 +63,3 @@ RUN \
   apt-get install -y byobu curl git htop man unzip vim wget && \
   rm -rf /var/lib/apt/lists/*
 CMD ["bash"]
->>>>>>> 207ba8d39546c3006e177f30b1c9792f8589f221
