@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 FROM scratch
 ADD ubuntu-trusty-core-cloudimg-amd64-root.tar.gz /
 
@@ -43,3 +44,24 @@ RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
 
 # overwrite this with 'CMD []' in a dependent Dockerfile
 CMD ["/bin/bash"]
+=======
+#
+# Ubuntu Dockerfile
+#
+# https://github.com/dockerfile/ubuntu
+#
+
+# Pull base image.
+FROM ubuntu:14.04
+
+# Install.
+RUN \
+  sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
+  apt-get update && \
+  apt-get -y upgrade && \
+  apt-get install -y build-essential && \
+  apt-get install -y software-properties-common && \
+  apt-get install -y byobu curl git htop man unzip vim wget && \
+  rm -rf /var/lib/apt/lists/*
+CMD ["bash"]
+>>>>>>> 207ba8d39546c3006e177f30b1c9792f8589f221
