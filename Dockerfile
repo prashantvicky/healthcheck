@@ -8,5 +8,7 @@ RUN \
   apt-get install -y build-essential && \
   apt-get install -y software-properties-common && \
   apt-get install -y byobu curl git htop man unzip vim wget && \
+  apt-get install -y python2.7 python-pip && \
+  apt-get install -y sysstat && \
   rm -rf /var/lib/apt/lists/*
 CMD ["bash"]
