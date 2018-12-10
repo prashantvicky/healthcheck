@@ -43,7 +43,7 @@ RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
 
 # overwrite this with 'CMD []' in a dependent Dockerfile
 CMD ["/bin/bash"]
-=======
+
 #
 # Ubuntu Dockerfile
 #
