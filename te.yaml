@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: DaemonSet
+metadata:
+  name: hc
+  namespace: default
+  labels:
+    component: hc-details
+    version: v1
+    kubernetes.io/cluster-service: "true"
+spec:
+  selector:
+    matchLabels:
+      component: hc-details
+  template:
+    metadata:
+      labels:
+        component: hc-details
+        version: v1
+        kubernetes.io/cluster-service: "true"
+    spec:
+      containers:
+      - name: hc
+        image: prashant5375/healthcheck:latest
+      terminationGracePeriodSeconds: 10
