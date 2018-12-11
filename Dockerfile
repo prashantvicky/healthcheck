@@ -10,5 +10,7 @@ RUN \
   apt-get install -y byobu curl git htop man unzip vim wget && \
   apt-get install -y python2.7 python-pip && \
   apt-get install -y sysstat && \
+  apt-get install -y net-tools && \
+  apt-get install iputils-ping && \
   rm -rf /var/lib/apt/lists/*
 CMD ["bash"]
