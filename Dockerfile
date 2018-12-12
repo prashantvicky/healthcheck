@@ -3,7 +3,6 @@ FROM ubuntu:16.04
 # Install.
 RUN \
   sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
-  add-apt-repository -y ppa:deadsnakes/ppa && \
   apt-get update && \
   apt-get -y upgrade && \
   apt-get install -y build-essential && \
