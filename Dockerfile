@@ -15,4 +15,5 @@ RUN \
   apt-get install -y net-tools && \
   apt-get install -y iputils-ping && \
   rm -rf /var/lib/apt/lists/*
+COPY script.py /root \
 CMD ["bash"]
